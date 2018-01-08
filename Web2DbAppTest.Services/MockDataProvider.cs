@@ -10,14 +10,16 @@ using Newtonsoft.Json.Linq;
 namespace Web2DbAppTest.Services
 {
 
-    /// <summary>
-    /// Handles the data you get from an API(randomuser.me)
-    /// </summary>
+    /// <summary>Represents mock data provider.</summary>
     public class MockDataProvider
     {
+        #region Fields
         /// <summary>The url</summary>
         private string url = "https://randomuser.me/api/?results=";
+        #endregion
 
+
+        #region Methods
         /// <summary>
         /// Gets user data from API
         /// </summary>
@@ -40,5 +42,6 @@ namespace Web2DbAppTest.Services
             }
             return persons;
         }
+        #endregion
     }
 }

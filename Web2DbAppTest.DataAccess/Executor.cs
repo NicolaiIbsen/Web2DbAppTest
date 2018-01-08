@@ -8,20 +8,17 @@ using System.Threading.Tasks;
 
 namespace Web2DbAppTest.DataAccess
 {
-    /// <summary>
-    /// Gets connection to the database
-    /// </summary>
+    /// <summary>Represents executor</summary>
     public class Executor
     {
         #region Fields
-        /// <summary>
-        /// Connection string to the database
-        /// </summary>
+        /// <summary>The connection string.</summary>
         private static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Web2Db;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         #endregion
 
 
         #region Constructor
+        /// <summary>Creates a new <see cref="Executor"/> object. Tries to connecet. If fail throw Exception</summary>
         public Executor()
         {
             try

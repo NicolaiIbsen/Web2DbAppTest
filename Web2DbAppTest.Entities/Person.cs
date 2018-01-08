@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Web2DbAppTest.Entities
 {
+    /// <summary>Represents person.</summary>
     public class Person
     {
         #region Fields

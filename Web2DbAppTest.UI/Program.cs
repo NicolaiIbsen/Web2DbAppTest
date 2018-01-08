@@ -15,7 +15,7 @@ namespace Web2DbAppTest.UI
         {
             MockDataProvider dataProvider = new MockDataProvider();
             DataRepository repo = new DataRepository();
-            repo.Executor.Execute("dbo.MyProcedure1", repo.SqlCreater(dataProvider.GetPeople(5)));
+            repo.Executor.Execute("dbo.MyProcedure1", repo.SqlCreater(dataProvider.GetPeople(10)));
 
 
             foreach (Person p in repo.GetAll())

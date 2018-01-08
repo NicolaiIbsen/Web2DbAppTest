@@ -8,27 +8,38 @@ using System.Threading.Tasks;
 
 namespace Web2DbAppTest.DataAccess
 {
-    /// <summary>
-    /// Handles all data in the database
-    /// </summary>
+    /// <summary>Represents data repository.</summary>
     public class DataRepository
     {
+        #region Fields
+        /// <summary>The executor.</summary>
         private Executor executor;
+        #endregion
 
+
+        #region Constructor 
+        /// <summary>Creates a new <see cref="DataRepository"/> object with the specified executor</summary>
+        /// <param name="Executor">The excutor.</param>
         public DataRepository()
         {
             Executor = new Executor();
         }
+        #endregion
 
+
+        #region Properties
+        /// <summary>Gets or sets the email.</summary>
         public Executor Executor { get => executor; set => executor = value; }
+        #endregion
 
+
+        #region Methods
         /// <summary>
         /// Gets all the Person(s) from your database
         /// </summary>
         /// <returns>returns a List<Person></returns>
         public List<Person> GetAll()
         {
-            int i = 6;
             List<Person> persons = new List<Person>();
             string sql = "SELECT * FROM Persons";
             DataSet set = Executor.Execute(sql);
@@ -57,5 +68,6 @@ namespace Web2DbAppTest.DataAccess
             }
             return sql.TrimEnd(',');
         }
+        #endregion
     }
 }
