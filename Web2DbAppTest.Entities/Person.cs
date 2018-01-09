@@ -38,8 +38,11 @@ namespace Web2DbAppTest.Entities
 
 
         #region Properties
+        /// <summary>Gets or sets the firstname field.</summary>
         public string Firstname { get => firstname; set => firstname = value; }
+        /// <summary>Gets or sets the lastname field.</summary>
         public string Lastname { get => lastname; set => lastname = value; }
+        /// <summary>Gets or sets the titelOfCourtesy field.</summary>
         public string TitelOfCourtesey { get => titelOfCourtesey; set => titelOfCourtesey = value; }
         #endregion
 
